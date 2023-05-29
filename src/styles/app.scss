@@ -44,6 +44,7 @@ nav{
             text-decoration: none;
             color:$c-text;
             position:relative;
+            transition: color .3s;
 
             &::after{
                 content: "";
@@ -59,7 +60,7 @@ nav{
                 transition: border-bottom .3s;
             }
             &:hover{
-                transition: .3s;
+                transition: color .3s;
                 color:$c-text-alt;
             }
             &:hover::after{
@@ -72,6 +73,7 @@ nav{
             text-decoration: none;
             color:$c-text;
             position:relative;
+            transition: color .3s;
 
             &::after{
                 content: "";
@@ -86,7 +88,7 @@ nav{
                 transition: border-bottom .3s, width .3s, left .3s, transform .3s;
             }
             &:hover{
-                transition: .3s;
+                transition: color .3s;
                 color:$c-text-alt;
             }
             &:hover::after{
