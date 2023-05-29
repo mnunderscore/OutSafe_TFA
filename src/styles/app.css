@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=League+Spartan:400");
+@font-face {
+  font-family: SchaboCondensed;
+  src: url(../assets/SCHABO-Condensed.otf);
+}
+html {
+  font-size: 187.5%;
+} /*30px*/
+body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  background-color: #22333B;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2 {
+  margin: 3rem 0 1.38rem;
+  font-family: SchaboCondensed;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #F2F4F3;
+}
+
+h3, .nav {
+  margin: 3rem 0 1.38rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 7.451rem;
+}
+
+h2 {
+  font-size: 4.768rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+.nav {
+  font-size: 2.441rem;
+}
+
+small, .text_small {
+  font-size: 0.8rem;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 0fr minmax(0, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin: 75px 75px 0px 75px;
+}
+
+nav {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row;
+}
+nav .nav__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+  list-style: none;
+}
+nav .nav__links .links__el a {
+  text-decoration: none;
+  color: #F2F4F3;
+}/*# sourceMappingURL=app.css.map */
