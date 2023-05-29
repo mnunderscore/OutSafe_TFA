@@ -16,6 +16,22 @@ nav{
     display:flex;
     flex-direction: row;
 
+    .nav__title{
+        position:relative;
+
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 15px;
+            height: 100px;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/prideflag.jpg);
+            background-size:cover;
+            z-index: -1;
+        }
+    }
+
     .nav__links{
         display:flex;
         flex-direction: row;
@@ -24,9 +40,90 @@ nav{
         flex-grow: 1;
         list-style: none;
 
+        .links__el--active a{
+            text-decoration: none;
+            color:$c-text;
+            position:relative;
+
+            &::after{
+                content: "";
+                display: block;
+                position:absolute;
+                width: 100%;
+                bottom:-5px;
+                margin:0;
+                rotate:180deg;
+                border-bottom: 60px solid $c-bg-alt;
+                z-index: -1;
+                transition: border-bottom .3s;
+            }
+            &:hover{
+                transition: .3s;
+            }
+            &:hover::after{
+                border-bottom: 60px solid #A63446;
+                transition: border-bottom .3s;
+            }
+        }
+
         .links__el a{
             text-decoration: none;
             color:$c-text;
+            position:relative;
+
+            &::after{
+                content: "";
+                display: block;
+                position:absolute;
+                width: 100%;
+                bottom:-5px;
+                margin:0;
+                rotate:180deg;
+                border-bottom: 25px solid $c-bg-alt;
+                z-index: -1;
+                transition: border-bottom .3s;
+            }
+            &:hover{
+                transition: .3s;
+            }
+            &:hover::after{
+                border-bottom: 60px solid #A63446;
+                transition: border-bottom .3s;
+            }
         }
+
+        
+    }
+}
+
+.intro{
+    grid-column:1/5;
+    grid-row:2/4;
+    background-color: $c-bg-alt;
+    margin: 0px -75px 0px -75px;
+    color:$c-text-alt;
+    border-radius: 50px 0px 50px 0px;
+    border-top: 10px solid $c-accent;
+    border-bottom: 10px solid $c-accent;
+}
+
+.intro__content{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 0fr minmax(0, 1fr);
+    margin: 50px 75px 50px 75px;
+
+    p{
+        grid-column: 1 / 4;
+    }
+
+    .intro__graph{
+        margin-top:-50px;
+        margin-bottom:-50px;
+        width:50%;
+        margin-left:50%;
+        grid-column:4/5;
+        grid-row: 1/4;
+        background-color: $c-accent;
     }
 }
