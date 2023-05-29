@@ -23,7 +23,7 @@ nav{
             content: "";
             display: block;
             position: absolute;
-            bottom: 15px;
+            bottom: 0px;
             height: 100px;
             width: 100%;
             background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/prideflag.jpg);
@@ -36,7 +36,7 @@ nav{
         display:flex;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: flex-end;
         flex-grow: 1;
         list-style: none;
 
@@ -125,5 +125,21 @@ nav{
         grid-column:4/5;
         grid-row: 1/4;
         background-color: $c-accent;
+    }
+}
+
+.footer{
+    grid-column:1/5;
+    grid-row:4/5;
+    background-color: $c-bg-alt;
+    margin: 0px -75px 0px -75px;
+    color:$c-text-alt;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    p{
+        margin: 10px 75px 0px 75px;
     }
 }
