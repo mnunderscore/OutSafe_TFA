@@ -5,10 +5,15 @@
   src: url(../assets/SCHABO-Condensed.otf);
 }
 
+@font-face {
+  font-family: LeagueSpartan;
+  src: url(../assets/LeagueSpartan.ttf);
+}
+
 html {font-size: 187.5%;} /*30px*/
 
 body {
-  font-family: 'League Spartan', sans-serif;
+  font-family: LeagueSpartan;
   font-weight: 400;
   line-height: 1.75;
   background-color: $c-bg;
@@ -28,7 +33,7 @@ h1, h2 {
 
 h3, .nav__links {
   margin: 3rem 0 1.38rem;
-  font-family: 'League Spartan', sans-serif;
+  font-family: LeagueSpartan;
   font-weight: 400;
   line-height: 1.3;
 }
