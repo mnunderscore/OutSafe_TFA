@@ -161,6 +161,17 @@ nav{
     }
 }
 
+.block--3{
+    grid-column:1/5;
+    grid-row:8/10;
+    background-color: $c-bg;
+    margin: 0px -75px 0px -75px;
+    color:$c-text;
+    border-radius: 0px 50px 0px 50px;
+    border-top: 10px solid $c-accent;
+    border-bottom: 10px solid $c-accent;
+}
+
 .block__content{
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -194,7 +205,7 @@ nav{
 
 .footer{
     grid-column:1/5;
-    grid-row:8/9;
+    grid-row:10/11;
     background-color: $c-bg-alt;
     margin: 0px -75px 0px -75px;
     color:$c-text-alt;
@@ -205,5 +216,16 @@ nav{
 
     p{
         margin: 10px 75px 0px 75px;
+
+        a{
+            text-decoration: none;
+            color:$c-text-alt;
+            transition: .3s;
+
+            &:hover{
+                color:$c-text;
+                transition: .3s;
+            }
+        }
     }
 }

@@ -207,6 +207,17 @@ nav .nav__links .links__el a:hover::after {
   color: #22333B;
 }
 
+.block--3 {
+  grid-column: 1/5;
+  grid-row: 8/10;
+  background-color: #22333B;
+  margin: 0px -75px 0px -75px;
+  color: #F2F4F3;
+  border-radius: 0px 50px 0px 50px;
+  border-top: 10px solid #A63446;
+  border-bottom: 10px solid #A63446;
+}
+
 .block__content {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -240,7 +251,7 @@ nav .nav__links .links__el a:hover::after {
 
 .footer {
   grid-column: 1/5;
-  grid-row: 8/9;
+  grid-row: 10/11;
   background-color: #15B097;
   margin: 0px -75px 0px -75px;
   color: #22333B;
@@ -251,4 +262,13 @@ nav .nav__links .links__el a:hover::after {
 }
 .footer p {
   margin: 10px 75px 0px 75px;
+}
+.footer p a {
+  text-decoration: none;
+  color: #22333B;
+  transition: 0.3s;
+}
+.footer p a:hover {
+  color: #F2F4F3;
+  transition: 0.3s;
 }/*# sourceMappingURL=app.css.map */
