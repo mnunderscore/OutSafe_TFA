@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=League+Spartan:400");
 @font-face {
   font-family: SchaboCondensed;
   src: url(../assets/SCHABO-Condensed.otf);
@@ -68,6 +67,10 @@ small, .text_small {
   margin: 75px 75px 0px 75px;
 }
 
+.preload * {
+  transition: none !important;
+}
+
 nav {
   grid-column: 1/5;
   grid-row: 1/2;
@@ -122,6 +125,9 @@ nav .nav__links .links__el--active a:hover {
 nav .nav__links .links__el--active a:hover::after {
   border-bottom: 60px solid #15B097;
   transition: border-bottom 0.3s;
+}
+nav .nav__links .links__el {
+  color: #F2F4F3;
 }
 nav .nav__links .links__el a {
   text-decoration: none;
@@ -249,6 +255,63 @@ nav .nav__links .links__el a:hover::after {
   grid-column: 3/5;
 }
 
+.uikit {
+  grid-column: 1/5;
+  grid-row: 2/4;
+  background-color: #15B097;
+  margin: 0px -75px 0px -75px;
+  color: #22333B;
+  border-radius: 50px 0px 50px 0px;
+  border-top: 10px solid #A63446;
+  border-bottom: 10px solid #A63446;
+  z-index: -2;
+}
+
+.uikit__content {
+  grid-column: 1/5;
+  margin: 50px 75px 50px 75px;
+}
+.uikit__content .uikit__title {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #22333B;
+}
+.uikit__content .uikit__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/images/prideflag.jpg);
+  background-size: cover;
+  z-index: -1;
+}
+.uikit__content .uikit__subtitle {
+  grid-column: 1/3;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  color: #22333B;
+}
+.uikit__content .uikit__subtitle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  background-color: #A63446;
+  z-index: -1;
+}
+
 .footer {
   grid-column: 1/5;
   grid-row: 10/11;
@@ -271,4 +334,15 @@ nav .nav__links .links__el a:hover::after {
 .footer p a:hover {
   color: #F2F4F3;
   transition: 0.3s;
+}
+.footer div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 75px 0px 75px;
+}
+.footer div p {
+  margin: 0;
+}
+.footer div p:first-of-type {
+  margin-right: 25px;
 }/*# sourceMappingURL=app.css.map */
