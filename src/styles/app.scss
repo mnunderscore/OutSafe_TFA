@@ -347,6 +347,38 @@ nav{
     }
 }
 
+.credits{
+    grid-column:1/5;
+    grid-row:2/4;
+    background-color: $c-bg-alt;
+    margin: 0px -75px 0px -75px;
+    color:$c-text-alt;
+    border-radius: 50px 0px 50px 0px;
+    border-top: 10px solid $c-accent;
+    border-bottom: 10px solid $c-accent;
+}
+
+.credits__content{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 0fr minmax(0, 1fr);
+    margin: 50px 75px 50px 75px;
+
+    p{
+        grid-column: 2 / 5;
+    }
+
+    .credits__graph{
+        margin-top:-50px;
+        margin-bottom:-50px;
+        width:50%;
+        margin-right:50%;
+        grid-column:1/2;
+        grid-row: 1/4;
+        background-color: $c-accent;
+    }
+}
+
 .footer{
     grid-column:1/5;
     grid-row:10/11;
