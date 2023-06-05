@@ -339,9 +339,6 @@ nav .nav__links .links__el a:hover::after {
 .block--1.block--2 .block__titre, .block--2.block--2 .block__titre, .block--3.block--2 .block__titre {
   color: #22333B;
 }
-.block--1.block--3, .block--2.block--3, .block--3.block--3 {
-  border-radius: 0px 50px 0px 50px;
-}
 
 .block__content {
   display: grid;
