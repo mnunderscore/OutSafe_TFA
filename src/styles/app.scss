@@ -49,13 +49,9 @@
 
 .arrow-left  {
     left: .5rem;
-    transition: fill .3s;
     width:2rem;
     height:2rem;
     filter: drop-shadow(5px 5px $c-accent);
-    fill: $c-text-alt;
-
-    &:hover { fill: $c-accent; }
 
     .arrow-left{
         right: 0;
@@ -63,18 +59,18 @@
         height:0;
         filter: none;
         cursor: pointer;
+        fill: $c-text-alt;
+        transition: fill .3s;
+
+        &:hover { fill: $c-accent; }
     }
 }
 
 .arrow-right {
     right: .5rem;
-    transition: fill .3s;
     width:2rem;
     height:2rem;
     filter: drop-shadow(5px 5px $c-accent);
-    fill: $c-text-alt;
-
-    &:hover { fill: $c-accent; }
 
     .arrow-right{
         right: 0;
@@ -82,6 +78,10 @@
         height:0;
         filter: none;
         cursor: pointer;
+        fill: $c-text-alt;
+        transition: fill .3s;
+
+        &:hover { fill: $c-accent; }
     }
 }
 
@@ -147,18 +147,13 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 5;
-    cursor: pointer;
 }
 
 .arrow-left-alt {
     left: .5rem;
-    transition: fill .3s;
     width:2rem;
     height:2rem;
     filter: drop-shadow(5px 5px $c-accent);
-    fill: $c-text;
-
-    &:hover { fill: $c-accent; }
 
     .arrow-left-alt{
         right: 0;
@@ -166,18 +161,18 @@
         height:0;
         filter: none;
         cursor: pointer;
+        fill: $c-text;
+        transition: fill .3s;
+
+        &:hover { fill: $c-accent; }
     }
 }
 
 .arrow-right-alt {
     right: .5rem;
-    transition: fill .3s;
     width:2rem;
     height:2rem;
     filter: drop-shadow(5px 5px $c-accent);
-    fill: $c-text;
-
-    &:hover { fill: $c-accent; }
 
     .arrow-right-alt{
         right: 0;
@@ -185,6 +180,10 @@
         height:0;
         filter: none;
         cursor: pointer;
+        fill: $c-text;
+        transition: fill .3s;
+
+        &:hover { fill: $c-accent; }
     }
 }
 
