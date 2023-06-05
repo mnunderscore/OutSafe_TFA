@@ -160,6 +160,11 @@ nav{
             background-size:cover;
             z-index: -1;
         }
+
+        a{
+            color: $c-text;
+            text-decoration: none;
+        }
     }
 
     .nav__links{

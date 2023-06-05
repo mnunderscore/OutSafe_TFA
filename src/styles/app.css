@@ -212,6 +212,10 @@ nav .nav__title::after {
   background-size: cover;
   z-index: -1;
 }
+nav .nav__title a {
+  color: #F2F4F3;
+  text-decoration: none;
+}
 nav .nav__links {
   display: flex;
   flex-direction: row;
