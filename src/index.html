@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="styles/app.css">
 
     <script src="scripts/app.js" defer></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="preload">
     <div class="parent">
@@ -85,13 +88,26 @@
                     <h3>Résultats</h3>
                     <p>Les résultats sont donc les besoins identifiés:</p>
 
-                    <!-- TODO: Slider -->
-
-                    <p>- Arrêter/éviter les attaques verbales (insultes, mégenrage, utilisation de “deadname” dans le cas de personnes trans, menaces) et physiques (gestes agressifs, bousculade) voir même les agressions</p>
-
-                    <p>- Éviter la peur d’être mal vu / Éviter l’insécurité</p>
-
-                    <p>- Accessoirement, il serait bien d’informer quant aux lois sur la protection de personnes LGBTQ+ (La plupart des interviewé.e.s n’ont pas su répondre à la question de politique de protection et sécurité de personnes LGBTQ+)</p>
+                    <main class='container'>
+                        <div class='slider'>
+                            <svg class="slider-arrow arrow-left" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 24 24">
+                                <path class="arrow-left" d="M13.789 7.155A.75.75 0 0 1 15 7.747v8.501a.75.75 0 0 1-1.212.591L8.29 12.581a.746.746 0 0 1 .001-1.183l5.498-4.243z"/>
+                            </svg>
+                            <svg class="slider-arrow arrow-right" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 24 24">
+                                <path class="arrow-right "d="M10.211 7.155A.75.75 0 0 0 9 7.747v8.501a.75.75 0 0 0 1.212.591l5.498-4.258a.746.746 0 0 0-.001-1.183l-5.498-4.243z"/>
+                            </svg>
+                            <ul class='slider-track'>
+                                <li class='slider-slide'><p>Arrêter/éviter les attaques verbales (insultes, mégenrage, utilisation de “deadname” dans le cas de personnes trans, menaces) et physiques (gestes agressifs, bousculade) voir même les agressions</p></li>
+                                <li class='slider-slide'><p>Éviter la peur d’être mal vu / Éviter l’insécurité</p></li>
+                                <li class='slider-slide'><p>Accessoirement, il serait bien d’informer quant aux lois sur la protection de personnes LGBTQ+ (La plupart des interviewé.e.s n’ont pas su répondre à la question de politique de protection et sécurité de personnes LGBTQ+)</p></li>
+                            </ul>
+                        </div>
+                        <nav class='slider-interface'>
+                            <button class='slider-dot' data-index='0'></button>
+                            <button class='slider-dot' data-index='1'></button>
+                            <button class='slider-dot' data-index='2'></button>
+                        </nav>
+                    </main>
 
                 </div>
             </div>
@@ -109,12 +125,28 @@
 
                     <h3>Quelles sont-elles?</h3>
 
-                    <!-- TODO: Slider -->
-
-                    <p> -Système de report en cas de danger</p>
-                    <p>- Carte interactive avec les lieux “safe” pour personnes LGBTQ+</p>
-                    <p>- Site interactif sur comment protéger les personnes LGBTQ+</p>
-                    <p>Site interactif et informatif sur la globalité du sujet LGBTQ+</p>
+                    <main class='container-alt'>
+                        <div class='slider-alt'>
+                            <svg class="slider-arrow-alt arrow-left-alt" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 24 24">
+                                <path class="arrow-left-alt" d="M13.789 7.155A.75.75 0 0 1 15 7.747v8.501a.75.75 0 0 1-1.212.591L8.29 12.581a.746.746 0 0 1 .001-1.183l5.498-4.243z"/>
+                            </svg>
+                            <svg class="slider-arrow-alt arrow-right-alt" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 24 24">
+                                <path class="arrow-right-alt "d="M10.211 7.155A.75.75 0 0 0 9 7.747v8.501a.75.75 0 0 0 1.212.591l5.498-4.258a.746.746 0 0 0-.001-1.183l-5.498-4.243z"/>
+                            </svg>
+                            <ul class='slider-track-alt'>
+                                <li class='slider-slide-alt'><p>Système de report en cas de danger</p></li>
+                                <li class='slider-slide-alt'><p>Carte interactive avec les lieux “safe” pour personnes LGBTQ+</p></li>
+                                <li class='slider-slide-alt'><p>Site interactif sur comment protéger les personnes LGBTQ+</p></li>
+                                <li class='slider-slide-alt'><p>Site interactif et informatif sur l'intégralité du sujet LGBTQ+</p></li>
+                            </ul>
+                        </div>
+                        <nav class='slider-interface-alt'>
+                            <button class='slider-dot-alt' data-index='0'></button>
+                            <button class='slider-dot-alt' data-index='1'></button>
+                            <button class='slider-dot-alt' data-index='2'></button>
+                            <button class='slider-dot-alt' data-index='3'></button>
+                        </nav>
+                    </main>
 
                     <h3>Détermination des hypothèses</h3>
                     <p>Afin de déterminer les hypothèses, je me suis basé sur les besoins des utilisateurs, (le besoin principal étant le manque de sécurité dans les lieux publics) et j’ai essayé de leur proposer un système efficace et original, d’où mon choix de solution.</p>
