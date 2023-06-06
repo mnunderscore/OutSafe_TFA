@@ -63,7 +63,7 @@
         left: .5rem;
         width:2rem;
         height:2rem;
-        filter: drop-shadow(5px 5px $c-accent);
+        filter: drop-shadow(0px 5px $c-accent);
 
         .arrow-left, .arrow-left-alt{
             right: 0;
@@ -89,7 +89,7 @@
         right: .5rem;
         width:2rem;
         height:2rem;
-        filter: drop-shadow(5px 5px $c-accent);
+        filter: drop-shadow(0px 5px $c-accent);
 
         .arrow-right, .arrow-right-alt{
             right: 0;
@@ -136,7 +136,7 @@
         border: none;
         cursor: pointer;
         transition: width .3s, background-color .3s;
-        box-shadow: 5px 5px $c-accent;
+        box-shadow: 0px 5px $c-accent;
 
         &:not(:last-child) { margin-right: 0.5rem; }
 
@@ -932,14 +932,14 @@ nav{
 
 .footer,.footer-video,.footer-uikit,.footer-credits,.footer-contact{
     grid-column:1/5;
-    background-color: $c-bg-alt;
+    background-color: $c-bg;
     margin: 0px -75px 0px -75px;
-    color:$c-text-alt;
+    color:$c-text;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height:2em;
+    height:3em;
 
     &.footer{
         grid-row-start:12;
@@ -963,7 +963,7 @@ nav{
 
         a{
             text-decoration: none;
-            color:$c-text-alt;
+            color:$c-text;
             transition: .3s;
 
             &:hover{
