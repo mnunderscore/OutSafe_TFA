@@ -3,14 +3,27 @@
 
 // TODO: RESPONSIVE
 
-.parent {
-    // TODO: https://stackoverflow.com/questions/47461444/setting-different-lengths-for-grid-gaps-in-css-grid
+.parent,.parent-docs, .parent-uikit, .parent-credits, .parent-contact {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr 20px 0fr 20px 0fr;
     grid-column-gap: 20px;
     margin: 75px 75px 0px 75px;
+    &.parent{
+        grid-template-rows: 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr);
     }
+    &.parent-docs{
+        grid-template-rows: 0fr minmax(20px,0fr);
+    }
+    &.parent-uikit{
+        grid-template-rows: 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr);
+    }
+    &.parent-credits{
+        grid-template-rows: 0fr minmax(20px,0fr) 0fr minmax(20px,0fr);
+    }
+    &.parent-contact{
+        grid-template-rows: 0fr minmax(20px,0fr);
+    }
+}
 
 .preload * {
     -webkit-transition: none !important;
@@ -238,8 +251,6 @@ nav{
                 transform: translate(+10px, 0);
             }
         }
-
-
     }
 }
 
@@ -275,7 +286,7 @@ nav{
     }
 }
 
-.block--1, .block--2, .block--3{
+.block--1, .block--2, .block--3, .block--4{
     grid-column:1/5;
     margin: 0px -75px 0px -75px;
     border-top: 10px solid $c-accent;
@@ -293,7 +304,7 @@ nav{
             grid-row-start: 9;
         }
     }
-    &.block--2{
+    &.block--2, &.block--4{
         grid-row-start: 7;
         color:$c-text-alt;
         background-color: $c-bg-alt;
@@ -302,6 +313,46 @@ nav{
         .block__titre{
             color:$c-text-alt;
         }
+
+        &.block--2{
+            grid-row-start: 7;
+        }
+        &.block--4{
+            grid-row-start: 11;
+        }
+    }
+}
+
+.link-alt{
+    text-decoration: none;
+    color:$c-bg;
+    position:relative;
+    transition: color .3s;
+    z-index:1;
+    margin-left:5px;
+
+    &::after{
+        content: "";
+        display: block;
+        position:absolute;
+        width: 100%;
+        left:0px;
+        bottom:-5px;
+        margin:0;
+        rotate:180deg;
+        border-bottom: 17px solid $c-accent;
+        z-index:-1;
+        transition: border-bottom .3s, width .3s, left .3s, transform .3s;
+    }
+    &:hover{
+        transition: color .3s;
+        color:$c-bg-alt;
+    }
+    &:hover::after{
+        width: calc(100% + 20px);
+        border-bottom: 45px solid $c-accent;
+        transition: border-bottom .3s, width .3s, left .3s, transform .3s;
+        transform: translate(+10px, 0);
     }
 }
 
@@ -424,7 +475,7 @@ nav{
 
         .uikit__button{
             background: none;
-            color: $c-text;
+            color: $c-text-alt;
             border: none;
             font: inherit;
             cursor: pointer;
@@ -518,6 +569,80 @@ nav{
                 }
             }
         }
+
+        .uikit__links-alt{
+            grid-column: 1/3;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            list-style: none;
+
+            .links__el--active a{
+                text-decoration: none;
+                color:$c-bg-alt;
+                position:relative;
+                transition: color .3s;
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position:absolute;
+                    width: calc(100% + 20px);
+                    left:-10px;
+                    bottom:-5px;
+                    margin:0;
+                    rotate:180deg;
+                    border-bottom: 60px solid $c-accent;
+                    z-index: -1;
+                    transition: border-bottom .3s;
+                }
+            }
+
+            .links__el--hover a{
+                text-decoration: none;
+                color:$c-bg;
+                position:relative;
+                transition: color .3s;
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position:absolute;
+                    width: calc(100% + 20px);
+                    left:-10px;
+                    bottom:-5px;
+                    margin:0;
+                    rotate:180deg;
+                    border-bottom: 60px solid $c-accent;
+                    z-index: -1;
+                    transition: border-bottom .3s;
+                }
+            }
+
+            .links__el{
+                color:$c-text;
+            }
+
+            .links__el a{
+                text-decoration: none;
+                color:$c-bg-alt;
+                position:relative;
+                transition: color .3s;
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position:absolute;
+                    width: 100%;
+                    bottom:-5px;
+                    margin:0;
+                    rotate:180deg;
+                    border-bottom: 20px solid $c-accent;
+                    z-index: -1;
+                    transition: border-bottom .3s, width .3s, left .3s, transform .3s;
+                }
+            }
+        }
     }
 
     &.uikit__content--alt{
@@ -563,7 +688,7 @@ nav{
 
         .uikit__button{
             background: none;
-            color: $c-text;
+            color: $c-bg-alt;
             border: none;
             font: inherit;
             cursor: pointer;
@@ -657,6 +782,80 @@ nav{
                 }
             }
         }
+
+        .uikit__links-alt{
+            grid-column: 1/3;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            list-style: none;
+
+            .links__el--active a{
+                text-decoration: none;
+                color:$c-text-alt;
+                position:relative;
+                transition: color .3s;
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position:absolute;
+                    width: calc(100% + 20px);
+                    left:-10px;
+                    bottom:-5px;
+                    margin:0;
+                    rotate:180deg;
+                    border-bottom: 60px solid $c-accent;
+                    z-index: -1;
+                    transition: border-bottom .3s;
+                }
+            }
+
+            .links__el--hover a{
+                text-decoration: none;
+                color:$c-bg-alt;
+                position:relative;
+                transition: color .3s;
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position:absolute;
+                    width: calc(100% + 20px);
+                    left:-10px;
+                    bottom:-5px;
+                    margin:0;
+                    rotate:180deg;
+                    border-bottom: 60px solid $c-accent;
+                    z-index: -1;
+                    transition: border-bottom .3s;
+                }
+            }
+
+            .links__el{
+                color:$c-text;
+            }
+
+            .links__el a{
+                text-decoration: none;
+                color:$c-text-alt;
+                position:relative;
+                transition: color .3s;
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position:absolute;
+                    width: 100%;
+                    bottom:-5px;
+                    margin:0;
+                    rotate:180deg;
+                    border-bottom: 20px solid $c-accent;
+                    z-index: -1;
+                    transition: border-bottom .3s, width .3s, left .3s, transform .3s;
+                }
+            }
+        }
     }
 }
 
@@ -704,7 +903,7 @@ nav{
     height:2em;
 
     &.footer{
-        grid-row-start:10;
+        grid-row-start:12;
     }
     &.footer-docs{
         grid-row-start:3;
