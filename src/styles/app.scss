@@ -9,19 +9,19 @@
     grid-column-gap: 20px;
     margin: 75px 75px 0px 75px;
     &.parent{
-        grid-template-rows: 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr);
+        grid-template-rows: 0fr minmax(50px,0fr) 0fr minmax(50px,0fr) 0fr minmax(50px,0fr) 0fr minmax(50px,0fr) 0fr minmax(50px,0fr) 0fr minmax(50px,0fr);
     }
     &.parent-docs{
-        grid-template-rows: 0fr minmax(20px,0fr);
+        grid-template-rows: 0fr minmax(50px,0fr);
     }
     &.parent-uikit{
-        grid-template-rows: 0fr minmax(20px,0fr) 0fr minmax(20px,0fr) 0fr minmax(20px,0fr);
+        grid-template-rows: 0fr minmax(50px,0fr) 0fr minmax(50px,0fr) 0fr minmax(50px,0fr);
     }
     &.parent-credits{
-        grid-template-rows: 0fr minmax(20px,0fr) 0fr minmax(20px,0fr);
+        grid-template-rows: 0fr minmax(50px,0fr) 0fr minmax(50px,0fr);
     }
     &.parent-contact{
-        grid-template-rows: 0fr minmax(20px,0fr);
+        grid-template-rows: 0fr minmax(50px,0fr);
     }
 }
 
@@ -260,9 +260,8 @@ nav{
     background-color: $c-bg-alt;
     margin: 0px -75px 0px -75px;
     color:$c-text-alt;
-    border-radius: 50px 0px 50px 0px;
-    border-top: 10px solid $c-accent;
-    border-bottom: 10px solid $c-accent;
+    border-top: 5px solid $c-accent;
+    border-bottom: 5px solid $c-accent;
 
     .intro__content{
         display: grid;
@@ -289,13 +288,13 @@ nav{
 .block--1, .block--2, .block--3, .block--4{
     grid-column:1/5;
     margin: 0px -75px 0px -75px;
-    border-top: 10px solid $c-accent;
-    border-bottom: 10px solid $c-accent;
+    border-top: 5px solid $c-accent;
+    border-bottom: 5px solid $c-accent;
 
     &.block--1, &.block--3{
         color:$c-text;
         background-color: $c-bg;
-        border-radius: 0px 50px 0px 50px;
+
 
         &.block--1{
             grid-row-start: 5;
@@ -308,7 +307,7 @@ nav{
         grid-row-start: 7;
         color:$c-text-alt;
         background-color: $c-bg-alt;
-        border-radius: 50px 0px 50px 0px;
+
 
         .block__titre{
             color:$c-text-alt;
@@ -409,22 +408,22 @@ nav{
 .uikit, .uikit--alt{
     grid-column:1/5;
     margin: 0px -75px 0px -75px;
-    border-top: 10px solid $c-accent;
-    border-bottom: 10px solid $c-accent;
+    border-top: 5px solid $c-accent;
+    border-bottom: 5px solid $c-accent;
     z-index:-2;
 
     &.uikit{
         color:$c-text;
         background-color: $c-bg;
         grid-row-start:3;
-        border-radius: 50px 0px 50px 0px;
+
     }
 
     &.uikit--alt{
         color:$c-text-alt;
         background-color: $c-bg-alt;
         grid-row-start:5;
-        border-radius: 0px 50px 0px 50px;
+
     }
 }
 
@@ -865,9 +864,9 @@ nav{
     background-color: $c-bg-alt;
     margin: 0px -75px 0px -75px;
     color:$c-text-alt;
-    border-radius: 50px 0px 50px 0px;
-    border-top: 10px solid $c-accent;
-    border-bottom: 10px solid $c-accent;
+
+    border-top: 5px solid $c-accent;
+    border-bottom: 5px solid $c-accent;
 
     .credits__content{
         display: grid;
