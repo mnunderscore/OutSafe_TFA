@@ -15,39 +15,36 @@
     <script src="scripts/app.js" defer></script>
 </head>
 <body class="preload">
-    <div class="parent-credits">
+    <div class="parent-video">
         <nav>
             <h1 class="nav__title"><a href="index.html">Outsafe</a></h1>
             <ul class="nav__links">
                 <li class="links__el"><a href="index.html">Accueil</a></li>
-                <li class="links__el"><a href="video.html">Vidéo</a></li>
+                <li class="links__el--active"><a href="video.html">Vidéo</a></li>
                 <li class="links__el"><a href="uikit.html">UI-Kit</a></li>
-                <li class="links__el--active"><a href="credits.html">Crédits</a></li>
+                <li class="links__el"><a href="credits.html">Crédits</a></li>
             </ul>
         </nav>
 
-        <section class="credits">
+        <section class="video">
 
-            <div class="credits__content">
+            <div class="video__content">
 
-                <div class="credits__graph">
+                <div class="video__graph">
 
                 </div>
 
-                <h2 class="credits__titre">Crédits</h2>
+                <video controls preload="auto" autoplay="true" muted disablepictureinpicture controlslist="noremoteplayback" width="250">
+                    <source src="/assets/videos/vid.mp4" type="video/mp4">
 
-                <p>Icônes: <a class="link-alt" href="https://iconmonstr.com" target="_blank">iconmonstr</a></p>
-
-                <p>Font Schabo Condensed par <a class="link-alt" href="https://www.behance.net/tmrbnkrlsn" target="_blank">Tom Robin Karlsson</a></p>
-
-                <p><a class="link-alt" href="https://github.com/dwmaj/workflow/tree/laravel-mix-6">Custom Laravel Mix</a></p>
+                    <p>Votre navigateur ne sait pas lire la vidéo,&nbsp;<a class="link-alt" src="/assets/videos/vid.mp4">cliquez ici</a> pour télécharger la vidéo MP4</p>
+                </video>
 
             </div>
 
         </section>
 
-
-        <footer class="footer-credits">
+        <footer class="footer-video">
 
             <p>© <a href="https://xavier-philippe-renk.be/">Xavier-Philippe Renk</a>,&nbsp;2023</p>
 
