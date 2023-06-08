@@ -48,3 +48,14 @@ h3 {font-size: 1.953rem;}
 .nav__links, .uikit__links, .uikit__links-alt{font-size: 1.563rem;}
 
 small, .text_small {font-size: 0.8rem;}
+
+
+@media (max-width: 641px) {
+  html {font-size: 125%;}
+  h1 {
+    margin-top: 0;
+    font-size: 5.96rem;
+  }
+  h2 {font-size: 3.815rem;}
+  .nav__links{font-size: 1.25rem;}
+}
