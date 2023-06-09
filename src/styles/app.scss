@@ -1685,6 +1685,32 @@
             position:relative;
             margin-left:auto;
             margin-right:auto;
+            .links__el--active{
+                margin:5px;
+
+                & a{
+                    &::after{
+                        border-bottom: 60px solid $c-bg-alt;
+                    }
+                    &:hover::after{
+                        border-bottom: 60px solid $c-bg-alt;
+                    }
+                }
+            }
+
+            .links__el{
+                margin:5px;
+
+                & a{
+
+                    &::after{
+                        border-bottom: 20px solid $c-bg-alt;
+                    }
+                    &:hover::after{
+                        border-bottom: 60px solid $c-bg-alt;
+                    }
+                }
+            }
         }
     }
 
