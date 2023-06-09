@@ -1671,7 +1671,7 @@
 
 @media (min-width: 641px) and (max-width: 1280px) {
     .parent,.parent-video, .parent-uikit, .parent-credits, .parent-contact {
-        margin: 20px 40px 100px 40px;
+        margin: 20px 40px 0px 40px;
     }
 
     .navbar{
@@ -1682,33 +1682,9 @@
         }
 
         .nav__links{
-            height:100px;
-            margin: 0px -40px 0px -40px;
-
-            .links__el--active{
-                margin:5px;
-                & a{
-                    &::after{
-                        border-bottom: 60px solid $c-bg-alt;
-                    }
-                    &:hover::after{
-                        border-bottom: 60px solid $c-bg-alt;
-                    }
-                }
-            }
-
-            .links__el{
-                margin:5px;
-
-                & a{
-                    &::after{
-                        border-bottom: 20px solid $c-bg-alt;
-                    }
-                    &:hover::after{
-                        border-bottom: 60px solid $c-bg-alt;
-                    }
-                }
-            }
+            position:relative;
+            margin-left:auto;
+            margin-right:auto;
         }
     }
 
@@ -1933,14 +1909,6 @@
 @media (min-width: 961px) and (max-width: 1280px) {
     .parent,.parent-video, .parent-uikit, .parent-credits, .parent-contact {
         margin: 20px 40px 100px 40px;
-    }
-
-    .navbar{
-        .nav__links{
-            position:relative;
-            margin-left:auto;
-            margin-right:auto;
-        }
     }
 
     .block__content{
