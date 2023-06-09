@@ -36,10 +36,13 @@
     flex-direction: column;
     align-items: center;
 
+    .slider-interface{
+        margin:0;
+    }
+
     .slider, .slider-alt {
         position: relative;
-        width: min(800px,90vw);
-        height: 45vmin;
+        width: 100%;
         overflow: hidden;
 
         ul{
@@ -52,10 +55,14 @@
     }
 
     .slider-arrow, .slider-arrow-alt {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(50%);
         z-index: 5;
+        .slider-arrow:first-of-type, .slider-arrow-alt:first-of-type{
+            margin-right:25px;
+        }
+        .slider-arrow:last-of-type, .slider-arrow-alt:last-of-type{
+            margin-left:25px;
+        }
     }
     .arrow-left, .arrow-left-alt {
         left: .5rem;
@@ -120,9 +127,7 @@
         display: grid;
         place-items: center;
         min-width: 100%;
-        height: inherit;
         text-align:center;
-        padding: 0px 80px 0px 80px;
         box-sizing: border-box;
     }
 
@@ -136,7 +141,7 @@
         transition: width .3s, background-color .3s;
         box-shadow: 0px 5px $c-accent;
 
-        &:not(:last-child) { margin-right: 0.5rem; }
+        &:not(:last-of-type) { margin-right: 0.5rem; }
 
         &:hover:not(.active) { width: 0.75rem;background-color:$c-accent; }
         &:hover{background-color:$c-accent;}
@@ -149,10 +154,10 @@
         }
     }
 
-    .active { width: 2rem; }
+    .active { width: 1.5rem; }
 }
 
-nav{
+.navbar{
     grid-column: 1 / 5;
     grid-row-start: 1;
     display:flex;
@@ -1145,7 +1150,24 @@ nav{
         }
     }
 
-    nav{
+    .container, .container-alt{
+        .arrow-right, .arrow-left, .arrow-right-alt, .arrow-left-alt{
+            width: 3rem;
+            height: 3rem;
+        }
+
+
+        .slider-dot, .slider-dot-alt{
+            width: .75rem;
+            height: .75rem;
+
+
+            &:hover:not(.active) { width: 1.5rem;}
+        }
+        .active { width: 2rem; }
+    }
+
+    .navbar{
         display:grid;
         grid-column-start: 1;
         grid-row-start: 1;
@@ -1299,13 +1321,12 @@ nav{
             align-items: center;
             grid-column-start: 1;
             grid-row-start: 3;
-            margin:0;
             box-sizing: border-box;
+            aspect-ratio: 1 / .4;
+            width:100%;
 
             img{
                 height:100%;
-                min-height: 0%;
-                max-height: 50%;
                 object-fit: cover;
                 border-radius: 15px;
             }
@@ -1653,7 +1674,7 @@ nav{
         margin: 20px 40px 100px 40px;
     }
 
-    nav{
+    .navbar{
         .nav__title{
             &::after{
                 height: 100px;
@@ -1720,6 +1741,10 @@ nav{
             &::after{
                 height: 60px;
             }
+        }
+
+        .image{
+            aspect-ratio: 1 / .4;
         }
     }
 
@@ -1910,7 +1935,7 @@ nav{
         margin: 20px 40px 100px 40px;
     }
 
-    nav{
+    .navbar{
         .nav__links{
             position:relative;
             margin-left:auto;
