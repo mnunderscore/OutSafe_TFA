@@ -352,7 +352,7 @@
     }
     &:hover::after{
         width: calc(100% + 20px);
-        border-bottom: 45px solid $c-accent;
+        border-bottom: 43px solid $c-accent;
         transition: border-bottom .3s, width .3s, left .3s, transform .3s;
         transform: translate(+10px, 0);
     }
