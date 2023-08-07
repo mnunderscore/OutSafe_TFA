@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>OutSafe</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <head>
+        <title>OutSafe - TFA - X.-P. Renk</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="">
+        <meta name="description" content="Travail de fin d'année de Xavier-Philippe Renk">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Open Graph data -->
+        <meta property="og:site_name" content="OutSafe">
+        <meta property="og:title" content="OutSafe - TFA - X.-P. Renk">
+        <meta property="og:description" content="Travail de fin d'année de Xavier-Philippe Renk">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://xavier-philippe-renk.be/projets/tfa/index">
 
-    <link rel="stylesheet" href="styles/app.css">
+        <!-- Twitter Card data -->
+        <!-- due to issues with the very incomplete documentation, this might not be valid -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@mnunderscore">
+        <meta name="twitter:creator" content="@mnunderscore">
+        <meta name="twitter:title" content="OutSafe - TFA - X.-P. Renk">
+        <meta name="twitter:description" content="Travail de fin d'année de Xavier-Philippe Renk">
 
-    <script src="scripts/app.js" defer></script>
-</head>
-<body class="preload">
-    <div class="parent-video">
-        <nav class="navbar">
-            <h1 class="nav__title"><a href="index.html">Outsafe</a></h1>
-            <ul class="nav__links">
-                <li class="links__el"><a href="index.html">Accueil</a></li>
-                <li class="links__el--active"><a href="video.html">Vidéo</a></li>
-                <li class="links__el"><a href="uikit.html">UI-Kit</a></li>
-                <li class="links__el"><a href="credits.html">Crédits</a></li>
-            </ul>
-        </nav>
+        <link rel="stylesheet" href="styles/app.css">
 
-        <section class="video">
+        <script src="scripts/app.js" defer></script>
+    </head>
+    <body class="preload">
+        <div class="parent-video">
+            <nav class="navbar">
+                <h1 class="nav__title"><a href="index.html">Outsafe</a></h1>
+                <ul class="nav__links">
+                    <li class="links__el"><a href="index.html">Accueil</a></li>
+                    <li class="links__el--active"><a href="video.html">Vidéo</a></li>
+                    <li class="links__el"><a href="uikit.html">UI-Kit</a></li>
+                    <li class="links__el"><a href="credits.html">Crédits</a></li>
+                </ul>
+            </nav>
 
-            <div class="video__content">
+            <section class="video">
 
-                <div class="video__graph">
+                <div class="video__content">
+
+                    <div class="video__graph"></div>
+
+                    <video controls preload="auto" disablepictureinpicture controlslist="noremoteplayback" width="250">
+                        <source src="assets/videos/video.mp4" type="video/mp4">
+
+                        <p>Votre navigateur ne sait pas lire la vidéo,&nbsp;<a class="link-alt" src="assets/videos/video.mp4">cliquez ici</a> pour télécharger la vidéo MP4</p>
+                    </video>
 
                 </div>
 
-                <video controls preload="auto" disablepictureinpicture controlslist="noremoteplayback" width="250">
-                    <source src="assets/videos/video.mp4" type="video/mp4">
+            </section>
 
-                    <p>Votre navigateur ne sait pas lire la vidéo,&nbsp;<a class="link-alt" src="assets/videos/video.mp4">cliquez ici</a> pour télécharger la vidéo MP4</p>
-                </video>
+            <footer class="footer-video">
 
-            </div>
+                <p>© <a href="https://xavier-philippe-renk.be/">Xavier-Philippe Renk</a>,&nbsp;2023</p>
 
-        </section>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://dwt.heaj.be">DWT_</a></li>
+                </ul>
 
-        <footer class="footer-video">
+            </footer>
 
-            <p>© <a href="https://xavier-philippe-renk.be/">Xavier-Philippe Renk</a>,&nbsp;2023</p>
-
-            <div>
-                <p><a href="contact.html">Contact</a></p>
-                <p><a href="https://dwt.heaj.be">DWT_</a></p>
-            </div>
-
-        </footer>
-
-    </div>
-</body>
+        </div>
+    </body>
 </html>

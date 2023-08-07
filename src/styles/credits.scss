@@ -1,0 +1,96 @@
+.credits{
+    grid-column:1/5;
+    grid-row-start:3;
+    background-color: $c-bg-alt;
+    margin: 0px -75px 0px -75px;
+    color:$c-text-alt;
+
+    border-top: 5px solid $c-accent;
+    border-bottom: 5px solid $c-accent;
+
+    .credits__content{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: 0fr 0fr;
+        margin: 50px 75px 50px 75px;
+
+        p{
+            grid-column: 2 / 5;
+        }
+
+        .credits__graph{
+            margin-top:-50px;
+            margin-bottom:-50px;
+            width:50%;
+            margin-right:50%;
+            grid-column:1/2;
+            grid-row: 1/5;
+            background-color: $c-accent;
+        }
+
+        .credits__titre{
+            grid-column:2/5;
+            width:fit-content;
+            height:fit-content;
+            margin:0;
+            position:relative;
+            z-index: 1;
+            color:$c-text-alt;
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom:0;
+                height: 75px;
+                width: 100%;
+                background-color: $c-accent;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .credits{
+        grid-column-start:1;
+        grid-row-start:3;
+        margin: 0px -20px 0px -20px;
+
+        .credits__content{
+            display: grid;
+            grid-template-columns: 0fr;
+            margin: 25px 20px 75px 20px;
+
+            p{
+                grid-column-start:1;
+            }
+
+            .credits__graph{
+                display:none;
+            }
+
+            .credits__titre{
+                grid-column-start:1;
+                &::after{
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1279px) {
+    .credits{
+        margin: 0px -40px 0px -40px;
+
+        .credits__content{
+            margin: 25px 40px 75px 40px;
+            .credits__titre{
+                &::after{
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
