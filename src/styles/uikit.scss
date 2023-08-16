@@ -36,7 +36,7 @@
                 display: block;
                 position: absolute;
                 bottom: 0px;
-                height: 100px;
+                height: 65px;
                 width: 100%;
                 background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/prideflag.jpg);
                 background-size:cover;
@@ -58,9 +58,10 @@
                 display: block;
                 position: absolute;
                 bottom:0;
-                height: 75px;
+                height: 40px;
                 width: 100%;
-                background-color: $c-accent;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/prideflag.jpg);
+                background-size:cover;
                 z-index: -1;
             }
         }
@@ -249,7 +250,7 @@
                 display: block;
                 position: absolute;
                 bottom: 0px;
-                height: 100px;
+                height: 65px;
                 width: 100%;
                 background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/prideflag.jpg);
                 background-size:cover;
@@ -271,9 +272,10 @@
                 display: block;
                 position: absolute;
                 bottom:0;
-                height: 75px;
+                height: 40px;
                 width: 100%;
-                background-color: $c-accent;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/prideflag.jpg);
+                background-size:cover;
                 z-index: -1;
             }
         }
@@ -475,13 +477,13 @@
         &.uikit__content{
             .uikit__title{
                 &::after{
-                    height: 60px;
+                    height: 50px;
                 }
             }
 
             .uikit__subtitle{
                 &::after{
-                    height: 45px;
+                    height: 25px;
                 }
             }
 
@@ -559,13 +561,13 @@
         &.uikit__content--alt{
             .uikit__title{
                 &::after{
-                    height: 60px;
+                    height: 50px;
                 }
             }
 
             .uikit__subtitle{
                 &::after{
-                    height: 45px;
+                    height: 25px;
                 }
             }
 
@@ -654,13 +656,13 @@
         &.uikit__content{
             .uikit__title{
                 &::after{
-                    height: 100px;
+                    height: 60px;
                 }
             }
 
             .uikit__subtitle{
                 &::after{
-                    height: 60px;
+                    height: 35px;
                 }
             }
 
@@ -720,13 +722,13 @@
         &.uikit__content--alt{
             .uikit__title{
                 &::after{
-                    height: 100px;
+                    height: 60px;
                 }
             }
 
             .uikit__subtitle{
                 &::after{
-                    height: 60px;
+                    height: 35px;
                 }
             }
 
