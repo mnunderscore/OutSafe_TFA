@@ -202,10 +202,6 @@
     }
 }
 
-.block__list{
-    padding:0;
-}
-
 .link-alt{
     text-decoration: none;
     white-space: nowrap;
@@ -262,10 +258,11 @@
             content: "";
             display: block;
             position: absolute;
-            bottom:0;
+            bottom: 0px;
             height: 75px;
             width: 100%;
-            background-color: $c-accent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/prideflag.jpg);
+            background-size:cover;
             z-index: -1;
         }
     }
@@ -327,7 +324,7 @@
             transition: .3s;
 
             &:hover{
-                color:$c-text;
+                color:$c-bg-alt;
                 transition: .3s;
             }
         }
@@ -347,7 +344,7 @@
                 transition: .3s;
 
                 &:hover{
-                    color:$c-text;
+                    color:$c-bg-alt;
                     transition: .3s;
                 }
             }
@@ -607,6 +604,12 @@
                 margin-right:10px;
             }
         }
+    }
+}
+
+@media (min-width:641px){
+    .block__list{
+        padding:0;
     }
 }
 
