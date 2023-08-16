@@ -1,7 +1,6 @@
 @import 'utils/variables';
 @import 'components/type';
 @import 'uikit';
-@import 'sliders';
 @import 'contact';
 @import 'video';
 @import 'credits';
@@ -203,6 +202,10 @@
     }
 }
 
+.block__list{
+    padding:0;
+}
+
 .link-alt{
     text-decoration: none;
     white-space: nowrap;
@@ -284,7 +287,7 @@
         }
     }
 
-    .text{grid-column:3/5;grid-row: 1/5;}
+    .block__text{grid-column:3/5;grid-row: 1/5;}
 }
 
 .footer,.footer-video,.footer-uikit,.footer-credits,.footer-contact{
@@ -543,7 +546,7 @@
             }
         }
 
-        .text{grid-column-start:1;grid-row-start: 4;}
+        .block__text{grid-column-start:1;grid-row-start: 4;}
     }
 
     .footer,.footer-video,.footer-uikit,.footer-credits,.footer-contact{
