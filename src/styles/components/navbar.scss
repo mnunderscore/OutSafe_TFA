@@ -1,0 +1,204 @@
+.navbar{
+    grid-column: 1 / 5;
+    grid-row-start: 1;
+    display:flex;
+    flex-direction: row;
+
+    .nav__title{
+        position:relative;
+
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            height: 65px;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../assets/images/prideflag.jpg);
+            background-size:cover;
+            z-index: -1;
+        }
+
+        a{
+            color: $c-text;
+            text-decoration: none;
+        }
+    }
+
+    .nav__links{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        flex-grow: 1;
+        list-style: none;
+
+        .links__el--active a{
+            text-decoration: none;
+            color:$c-text;
+            position:relative;
+            transition: color .3s;
+
+            &::after{
+                content: "";
+                display: block;
+                position:absolute;
+                width: calc(100% + 20px);
+                left:-10px;
+                bottom:-5px;
+                margin:0;
+                rotate:180deg;
+                border-bottom: 60px solid $c-bg-alt;
+                z-index: -1;
+                transition: border-bottom .3s;
+            }
+            &:hover{
+                transition: color .3s;
+                color:$c-text-alt;
+            }
+            &:hover::after{
+                border-bottom: 60px solid $c-bg-alt;
+                transition: border-bottom .3s;
+            }
+        }
+
+        .links__el{
+            color:$c-text;
+        }
+
+        .links__el a{
+            text-decoration: none;
+            color:$c-text;
+            position:relative;
+            transition: color .3s;
+
+            &::after{
+                content: "";
+                display: block;
+                position:absolute;
+                width: 100%;
+                bottom:-5px;
+                margin:0;
+                rotate:180deg;
+                border-bottom: 20px solid $c-bg-alt;
+                z-index: -1;
+                transition: border-bottom .3s, width .3s, left .3s, transform .3s;
+            }
+            &:hover{
+                transition: color .3s;
+                color:$c-text-alt;
+            }
+            &:hover::after{
+                width: calc(100% + 20px);
+                border-bottom: 60px solid $c-bg-alt;
+                transition: border-bottom .3s, width .3s, left .3s, transform .3s;
+                transform: translate(+10px, 0);
+            }
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .navbar{
+        display:grid;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-template-rows: 0fr;
+
+        .nav__title{
+            grid-row-start: 1;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+
+            &::after{
+                height: 50px;
+            }
+        }
+
+        .nav__links{
+            position:fixed;
+            bottom:0;
+            grid-row-start: 2;
+            flex-direction: row;
+            align-items: center;
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            background-color: $c-bg;
+            height:80px;
+            width:100%;
+            margin: 0px -20px 0px -20px;
+            z-index:40;
+
+            .links__el--active{
+                margin:5px;
+
+                & a{
+                    &::after{
+                        border-bottom: 40px solid $c-bg-alt;
+                    }
+                    &:hover::after{
+                        border-bottom: 40px solid $c-bg-alt;
+                    }
+                }
+            }
+
+            .links__el{
+                margin:5px;
+
+                & a{
+
+                    &::after{
+                        border-bottom: 15px solid $c-bg-alt;
+                    }
+                    &:hover::after{
+                        border-bottom: 40px solid $c-bg-alt;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1279px) {
+    .navbar{
+        .nav__title{
+            &::after{
+                height: 60px;
+            }
+        }
+
+        .nav__links{
+            position:relative;
+            margin-left:auto;
+            margin-right:auto;
+            .links__el--active{
+                margin:5px;
+
+                & a{
+                    &::after{
+                        border-bottom: 60px solid $c-bg-alt;
+                    }
+                    &:hover::after{
+                        border-bottom: 60px solid $c-bg-alt;
+                    }
+                }
+            }
+
+            .links__el{
+                margin:5px;
+
+                & a{
+
+                    &::after{
+                        border-bottom: 20px solid $c-bg-alt;
+                    }
+                    &:hover::after{
+                        border-bottom: 60px solid $c-bg-alt;
+                    }
+                }
+            }
+        }
+    }
+}
