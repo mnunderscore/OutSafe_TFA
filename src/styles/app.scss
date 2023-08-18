@@ -43,13 +43,13 @@
     }
 }
 
-.block--1, .block--2, .block--3, .block--4{
+.block--1, .block--2, .block--3, .block--4, .block--5{
     grid-column:1/5;
     margin: 0px -75px 0px -75px;
     border-top: 5px solid $c-accent;
     border-bottom: 5px solid $c-accent;
 
-    &.block--1, &.block--3{
+    &.block--1, &.block--3, &.block--5{
         color:$c-text;
         background-color: $c-bg;
 
@@ -59,6 +59,9 @@
         }
         &.block--3{
             grid-row-start: 9;
+        }
+        &.block--5{
+            grid-row-start: 13;
         }
     }
     &.block--2, &.block--4{
@@ -79,7 +82,7 @@
     }
 }
 
-.link--alt{
+.link--alt,.link{
     text-decoration: none;
     white-space: nowrap;
     color:$c-bg;
@@ -110,6 +113,14 @@
         border-bottom: 43px solid $c-accent;
         transition: border-bottom .3s, width .3s, left .3s, transform .3s;
         transform: translate(+10px, 0);
+    }
+
+    &.link{
+        color:$c-text;
+
+        &:hover{
+            color:$c-text-alt;
+        }
     }
 }
 
@@ -151,6 +162,7 @@
         margin-right:25px;
         margin-top:1em;
         border-bottom: 10px solid $c-accent;
+        max-height:600px;
 
         img{
             width:0;
@@ -848,13 +860,13 @@
         }
     }
 
-    .block--1, .block--2, .block--3, .block--4{
+    .block--1, .block--2, .block--3, .block--4, .block--5{
         grid-column-start:1;
         margin: 0px -20px 0px -20px;
         border-top: 5px solid $c-accent;
         border-bottom: 5px solid $c-accent;
 
-        &.block--1, &.block--3{
+        &.block--1, &.block--3, &.block--5{
             color:$c-text;
             background-color: $c-bg;
 
@@ -864,6 +876,9 @@
             }
             &.block--3{
                 grid-row-start: 9;
+            }
+            &.block--5{
+                grid-row-start: 13;
             }
         }
         &.block--2, &.block--4{
@@ -1222,7 +1237,7 @@
         }
     }
 
-    .block--1, .block--2, .block--3, .block--4{
+    .block--1, .block--2, .block--3, .block--4, .block--5{
         margin: 0px -40px 0px -40px;
     }
 
