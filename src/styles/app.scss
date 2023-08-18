@@ -82,6 +82,32 @@
     }
 }
 
+details summary{
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: none;
+    background: none;
+    color: $c-text-alt;
+    transition: .3s;
+
+    &:hover{
+        color: $c-text;
+        transition: .3s;
+    }
+}
+
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+}
+
 .link--alt,.link{
     text-decoration: none;
     white-space: nowrap;
@@ -899,7 +925,7 @@
         }
     }
 
-    .link--alt{
+    .link--alt, .link{
         &::after{
             border-bottom: 13px solid $c-accent;
         }
@@ -1241,7 +1267,7 @@
         margin: 0px -40px 0px -40px;
     }
 
-    .link--alt{
+    .link--alt, .link{
         &::after{
             border-bottom: 17px solid $c-accent;
         }
